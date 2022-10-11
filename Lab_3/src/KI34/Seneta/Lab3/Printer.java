@@ -17,6 +17,7 @@ public class Printer {
     private PrinterPort PrinterPort;
     private PrinterMatrix PrinterMatrix;
     private PrintWriter fout;
+    public static int count = 0;
 
     /**
      * Constructor
@@ -29,6 +30,7 @@ public class Printer {
         PrinterPort = new PrinterPort();
         PrinterMatrix = new PrinterMatrix();
         fout = new PrintWriter(new File("Log.txt"));
+        count++;
     }
 
     /**
@@ -43,6 +45,7 @@ public class Printer {
         PrinterPort = new PrinterPort();
         PrinterMatrix = new PrinterMatrix();
         fout = new PrintWriter(new File("Log.txt"));
+        count++;
     }
 
     /**

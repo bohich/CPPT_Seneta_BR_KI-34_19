@@ -21,6 +21,7 @@ public class Lab_2_Seneta {
     public static void main(String[] args) throws FileNotFoundException {
         int nRows;
         char[][] arr;
+        char o = 'o';
         String filler;
         Scanner in = new Scanner(System.in);
         File dataFile = new File("MyTriangle.txt");
@@ -53,13 +54,21 @@ public class Lab_2_Seneta {
 
             for (int i = 0; i < nRows / 2; i++) {
                 for (int j = 0; j < nRows / 2 + 1 + i; j++) {
-                    arr[i][j] = filler.charAt(0);
+                    if (j == nRows / 2) {
+                        arr[i][j] = o;
+                    } else {
+                        arr[i][j] = filler.charAt(0);
+                    }
                 }
             }
 
             for (int i = nRows / 2, w = 0; i < nRows; i++, w++) {
                 for (int j = 0; j < nRows - w; j++) {
-                    arr[i][j] = filler.charAt(0);
+                    if (j == nRows / 2) {
+                        arr[i][j] = o;
+                    } else {
+                        arr[i][j] = filler.charAt(0);
+                    }
                 }
             }
             for (int i = 0; i < nRows / 2; i++) {

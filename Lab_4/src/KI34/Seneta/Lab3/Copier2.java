@@ -4,14 +4,14 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.PrintWriter;
 
-public class Copier extends Printer implements Copy, test {
+public class Copier2 extends Printer implements Copy {
 
     private boolean turnOnCopy;
     private boolean isCoppied;
 
     private PrintWriter fout1;
 
-    public Copier() throws FileNotFoundException {
+    public Copier2() throws FileNotFoundException {
         super();
         fout1 = new PrintWriter(new File("Log.txt"));
     }
@@ -19,7 +19,6 @@ public class Copier extends Printer implements Copy, test {
     /**
      * Method releases used recourses
      */
-
     public void dispose() {
         fout1.close();
     }
@@ -52,17 +51,5 @@ public class Copier extends Printer implements Copy, test {
             fout1.print("Coppied\n");
             fout1.flush();
         }
-    }
-
-    @Override
-    public boolean isTest() {
-        // int a = 2 + 2;
-        return false;
-    }
-
-    @Override
-    public void startTest(boolean s_c) {
-        // int a = 2 + 2;
-
     }
 }
