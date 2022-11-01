@@ -17,6 +17,7 @@ class CalcWfio {
     }
 
     public void readResTxt(String fName) {
+
         try {
             File f = new File(fName);
             if (f.exists()) {
@@ -25,6 +26,7 @@ class CalcWfio {
                 s.close();
             } else
                 throw new FileNotFoundException("File " + fName + "not found");
+
         } catch (FileNotFoundException ex) {
             System.out.print(ex.getMessage());
         }
